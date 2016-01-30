@@ -9,7 +9,7 @@ function tableify(obj, columns, parents) {
 
     parents = parents || [];
 
-    if (type !== 'object' || obj == null || obj == undefined) {
+    if (type !== 'object' || obj === null || obj === undefined) {
     }
     else if (~parents.indexOf(obj)) {
         return "[Circular]";
@@ -86,7 +86,7 @@ function tableify(obj, columns, parents) {
         buf.push(obj);
     }
 
-    if (type !== 'object' || obj == null || obj == undefined) {
+    if (type !== 'object' || obj === null || obj === undefined) {
     }
     else {
         parents.pop(obj);
